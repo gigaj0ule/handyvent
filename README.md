@@ -1,17 +1,17 @@
-The pins are:
+The pins are:.
 
-Fill valve: d1
+Fill valve: d10.
 
-Inspiration valve: d
+Inspiration valve: d9.
 
-Expiration valve: d
+Expiration valve: d8.
 
-Buzzer: d
+Buzzer: d6.
 
-Lcd data: d5-d
+Lcd data: d5-d2.
 
-Lcd enable: d1
+Lcd enable: d11
 
-Lcd register select: d1
+Lcd register select: d12
 
-Potentiometers: a0-a
+Potentiometers: a0-a2.
