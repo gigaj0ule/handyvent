@@ -7,6 +7,7 @@
 #define TIME_INHALE_MAX   1000ul
 #define TIME_EXHALE_MIN   100ul
 #define TIME_EXHALE_MAX   3000ul
+#define TIME_NEITHER_OPEN       100ul // time between closing one valve and opening another
 
 #define KNOB_FILL       A0
 #define KNOB_INHALE     A1
@@ -46,10 +47,10 @@ void ventilate() {
 
   digitalWrite(VALVE_EXHALE, cycle_time < time_exhale); // set exhale valve
 
-  digitalWrite(VALVE_INHALE, (cycle_time > time_exhale)
-                          && (cycle_time < (time_inhale + time_exhale))); // set inhale valve
+  digitalWrite(VALVE_INHALE, (cycle_time > time_exhale + TIME_NEITHER_OPEN)
+                          && (cycle_time < (time_inhale + time_exhale + TIME_NEITHER_OPEN))); // set inhale valve
 
-  if (cycle_time > (time_inhale + time_exhale)) {
+  if (cycle_time > (time_inhale + time_exhale + (TIME_NEITHER_OPEN * 2))) {
     time_start_ventilate = millis(); // record the present time and restart the cycle
     Serial.print("Restart time_start_ventilate at "+String(time_start_ventilate));
     Serial.println("	time_fill:"+String(time_fill)+"	time_inhale:"+String(time_inhale)+"	time_exhale:"+String(time_exhale));
