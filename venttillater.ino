@@ -3,8 +3,8 @@
 
 #define CYCLES_PER_MINUTE_MIN       6
 #define CYCLES_PER_MINUTE_MAX       25
-#define INHALE_EXHALE_RATIO_MIN     1 // technically actually exhale/inhale ratio
-#define INHALE_EXHALE_RATIO_MAX     5 // but this seems common terminology
+#define INHALE_EXHALE_RATIO_MIN     1.0f // technically actually exhale/inhale ratio
+#define INHALE_EXHALE_RATIO_MAX     5.0f // but this seems common terminology
 
 #define TIME_FILL_MIN      100ul
 #define TIME_FILL_MAX     5000ul
