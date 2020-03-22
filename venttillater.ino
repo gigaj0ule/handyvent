@@ -16,9 +16,9 @@
 
 #define VALVE_FILL      10
 #define VALVE_INHALE    9
-#define VALVE_EXHALE    8
+#define VALVE_EXHALE    6
 
-#define BEEPER_PIN      6       // connect a speaker or beeper
+#define BEEPER_PIN      7       // connect a speaker or beeper
 #define BADTONE	        200	// bad tone frequency
 #define GOODTONE	1000	// good tone frequency
 
