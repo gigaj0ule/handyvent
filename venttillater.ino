@@ -1,4 +1,4 @@
-#define VERSIONSTRING   'VENTTILLATER.git version 1.0' // 16 characters per line
+#define VERSIONSTRING   "VENTTILLATER.git version 1.0" // 16 characters per line
 #define SERIAL_BAUD_RATE        57600
 
 #define TIME_FILL_MIN   100
@@ -57,9 +57,9 @@ void ventilate() {
 }
 
 void checkKnobs() {
-  time_fill = (TIME_FILL_MIN + ((TIME_FILL_MAX - TIME_FILL_MIN)*1023)/(1024-knobRead(KNOB_FILL)));
-  time_inhale = (TIME_INHALE_MIN + ((TIME_INHALE_MAX - TIME_INHALE_MIN)*1023)/(1024-knobRead(KNOB_INHALE)));
-  time_exhale = (TIME_EXHALE_MIN + ((TIME_EXHALE_MAX - TIME_EXHALE_MIN)*1023)/(1024-knobRead(KNOB_EXHALE)));
+  time_fill = (TIME_FILL_MIN + ((TIME_FILL_MAX - TIME_FILL_MIN)*knobRead(KNOB_FILL))/1023);
+  time_inhale = (TIME_INHALE_MIN + ((TIME_INHALE_MAX - TIME_INHALE_MIN)*knobRead(KNOB_INHALE))/1023);
+  time_exhale = (TIME_EXHALE_MIN + ((TIME_EXHALE_MAX - TIME_EXHALE_MIN)*knobRead(KNOB_EXHALE))/1023);
   //Serial.println(); // newline after three knobReads
 }
 
