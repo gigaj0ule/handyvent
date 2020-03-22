@@ -39,18 +39,20 @@ uint32_t time_exhale;	 // time to exhale
 uint32_t time_start_ventilate; // record the time at start of cycle
 
 void ventilate() {
-  digitalWrite(VALVE_FILL, (time_start_ventilate < time_fill)
-                        && (time_start_ventilate < time_exhale)); // set fill valve
+  uint32_t cycle_time = millis() - time_start_ventilate;
+  digitalWrite(VALVE_FILL, (cycle_time < time_fill)
+                        && (cycle_time < time_exhale)); // set fill valve
   // FILL VALVE WILL CLOSE WHEN EXHALE ENDS REGARDLESS OF FILL TIME SETTING
 
-  digitalWrite(VALVE_EXHALE, time_start_ventilate < time_exhale); // set exhale valve
+  digitalWrite(VALVE_EXHALE, cycle_time < time_exhale); // set exhale valve
 
-  digitalWrite(VALVE_INHALE, (time_start_ventilate > time_exhale)
-                          && (time_start_ventilate < (time_inhale + time_exhale))); // set inhale valve
+  digitalWrite(VALVE_INHALE, (cycle_time > time_exhale)
+                          && (cycle_time < (time_inhale + time_exhale))); // set inhale valve
 
-  if (time_start_ventilate > (time_inhale + time_exhale)) {
+  if (cycle_time > (time_inhale + time_exhale)) {
     time_start_ventilate = millis(); // record the present time and restart the cycle
-    Serial.println("Restart time_start_ventilate at "+String(time_start_ventilate));
+    Serial.print("Restart time_start_ventilate at "+String(time_start_ventilate));
+    Serial.println("	time_fill:"+String(time_fill)+"	time_inhale:"+String(time_inhale)+"	time_exhale:"+String(time_exhale));
   }
 }
 
@@ -58,14 +60,14 @@ void checkKnobs() {
   time_fill = (TIME_FILL_MIN + ((TIME_FILL_MAX - TIME_FILL_MIN)*1023)/(1024-knobRead(KNOB_FILL)));
   time_inhale = (TIME_INHALE_MIN + ((TIME_INHALE_MAX - TIME_INHALE_MIN)*1023)/(1024-knobRead(KNOB_INHALE)));
   time_exhale = (TIME_EXHALE_MIN + ((TIME_EXHALE_MAX - TIME_EXHALE_MIN)*1023)/(1024-knobRead(KNOB_EXHALE)));
-  Serial.println(); // newline after three knobReads
+  //Serial.println(); // newline after three knobReads
 }
 
 uint16_t knobRead(uint16_t pinNumber) {
   uint32_t analogAdder = 0;
   for (uint16_t j=0; j<OVERSAMPLES; j++) analogAdder += analogRead(pinNumber);
   uint32_t averageRead = analogAdder / OVERSAMPLES;
-  Serial.print("	pin "+String(pinNumber)+": "+String(averageRead));
+  //Serial.print("	pin "+String(pinNumber)+": "+String(averageRead));
   return averageRead;
 }
 
@@ -106,4 +108,5 @@ void loop() {
   updateLCD();
   checkKnobs();
   ventilate();
+  delay(50); // TODO should not need this
 }
