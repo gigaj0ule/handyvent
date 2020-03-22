@@ -1,12 +1,12 @@
 #define VERSIONSTRING   "VENTTILLATER.git version 1.0" // 16 characters per line
 #define SERIAL_BAUD_RATE        57600
 
-#define TIME_FILL_MIN   100
-#define TIME_FILL_MAX   1000
-#define TIME_INHALE_MIN   500
-#define TIME_INHALE_MAX   1000
-#define TIME_EXHALE_MIN   100
-#define TIME_EXHALE_MAX   3000
+#define TIME_FILL_MIN   100ul
+#define TIME_FILL_MAX   1000ul
+#define TIME_INHALE_MIN   500ul
+#define TIME_INHALE_MAX   1000ul
+#define TIME_EXHALE_MIN   100ul
+#define TIME_EXHALE_MAX   3000ul
 
 #define KNOB_FILL       A0
 #define KNOB_INHALE     A1
