@@ -1,0 +1,15 @@
+Display
+https://www.adafruit.com/product/181
+
+Pots
+https://www.digikey.com/product-detail/en/tt-electronics-bi/P160KNPD-4FC20B10K/987-1314-ND/2408891
+
+Buzzer
+ks21201
+
+Fet
+https://www.adafruit.com/product/355
+
+Terminal blocks
+https://www.adafruit.com/product/724
+
