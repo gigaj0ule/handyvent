@@ -2,7 +2,8 @@ The pins are:.
 
 Fill valve: d10.
 
-Inspiration valve: d9 - OPEN, d13 - OPEN
+Inspiration valve: d9 - OPEN, d13 - CLOSE
+
 Expiration valve: d6 - OPEN, d8 - CLOSE
 
 Buzzer: d7.
