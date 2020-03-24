@@ -2,11 +2,10 @@ The pins are:.
 
 Fill valve: d10.
 
-Inspiration valve: d9.
+Inspiration valve: d9 - OPEN, d13 - OPEN
+Expiration valve: d6 - OPEN, d8 - CLOSE
 
-Expiration valve: d8.
-
-Buzzer: d6.
+Buzzer: d7.
 
 Lcd data: d5-d2.
 
