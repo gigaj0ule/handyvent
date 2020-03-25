@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ventilator-rescue)(type Legacy)(uri ${KIPRJMOD}/ventilator-rescue.lib)(options "")(descr ""))
+)
