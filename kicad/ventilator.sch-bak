@@ -67,10 +67,15 @@ Connection ~ 8350 1950
 Connection ~ 1800 800 
 Connection ~ 2000 800 
 Connection ~ 2700 800 
+Connection ~ 1200 1000
 Wire Wire Line
-	900  1200 900  1300
+	1100 800  1800 800 
 Wire Wire Line
-	1200 800  1800 800 
+	1100 900  1200 900 
+Wire Wire Line
+	1100 1000 1200 1000
+Wire Wire Line
+	1200 900  1200 1000
 Wire Wire Line
 	1200 1000 1200 1300
 Wire Wire Line
@@ -728,17 +733,6 @@ F 3 "" H 10300 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR01
-U 1 1 5E8818C1
-P 900 1300
-F 0 "#PWR01" H 900 1050 50  0001 C CNN
-F 1 "GND" H 905 1127 50  0000 C CNN
-F 2 "" H 900 1300 50  0001 C CNN
-F 3 "" H 900 1300 50  0001 C CNN
-	1    900  1300
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR02
 U 1 1 5E88DD14
 P 1200 1300
@@ -1190,6 +1184,28 @@ F 3 "~" V 8050 2400 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
+L Device:CP1_Small C1
+U 1 1 5E861DB0
+P 1500 5250
+F 0 "C1" H 1600 5309 50  0000 L CNN
+F 1 "DNP" H 1600 5231 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 1500 5250 50  0001 C CNN
+F 3 "~" H 1500 5250 50  0001 C CNN
+	1    1500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C2
+U 1 1 5E865C76
+P 1500 6850
+F 0 "C2" H 1600 6909 50  0000 L CNN
+F 1 "DNP" H 1600 6831 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 1500 6850 50  0001 C CNN
+F 3 "~" H 1500 6850 50  0001 C CNN
+	1    1500 6850
+	1    0    0    -1  
+$EndComp
+$Comp
 L Device:CP1_Small C3
 U 1 1 5E882863
 P 1800 1050
@@ -1212,37 +1228,15 @@ F 3 "~" H 2000 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C1
-U 1 1 5E84D8F9
-P 1500 5250
-F 0 "C1" H 1592 5205 50  0000 L CNN
-F 1 "DNP" H 1591 5295 50  0000 L CNN
-F 2 "Capacitor_THT:C_Radial_D6.3mm_H5.0mm_P2.50mm" H 1500 5250 50  0001 C CNN
-F 3 "~" H 1500 5250 50  0001 C CNN
-	1    1500 5250
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:C_Small C2
-U 1 1 5E857062
-P 1500 6850
-F 0 "C2" H 1592 6805 50  0000 L CNN
-F 1 "DNP" H 1591 6895 50  0000 L CNN
-F 2 "Capacitor_THT:C_Radial_D6.3mm_H5.0mm_P2.50mm" H 1500 6850 50  0001 C CNN
-F 3 "~" H 1500 6850 50  0001 C CNN
-	1    1500 6850
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:C_Small C5
-U 1 1 5E8610A5
+L Device:CP1_Small C5
+U 1 1 5E867241
 P 3000 6800
-F 0 "C5" H 3092 6755 50  0000 L CNN
-F 1 "DNP" H 3091 6845 50  0000 L CNN
-F 2 "Capacitor_THT:C_Radial_D6.3mm_H5.0mm_P2.50mm" H 3000 6800 50  0001 C CNN
+F 0 "C5" H 3100 6859 50  0000 L CNN
+F 1 "DNP" H 3100 6781 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 3000 6800 50  0001 C CNN
 F 3 "~" H 3000 6800 50  0001 C CNN
 	1    3000 6800
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J2
@@ -1250,7 +1244,7 @@ U 1 1 5E7C5D35
 P 1200 2050
 F 0 "J2" H 1200 2200 50  0000 C CNN
 F 1 "Conn_01x02" H 1120 2176 50  0001 C CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 1200 2050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1200 2050 50  0001 C CNN
 F 3 "~" H 1200 2050 50  0001 C CNN
 	1    1200 2050
 	-1   0    0    -1  
@@ -1261,7 +1255,7 @@ U 1 1 5E7CE0CD
 P 4000 3250
 F 0 "J3" H 4000 3400 50  0000 C CNN
 F 1 "Conn_01x02" H 3920 3376 50  0001 C CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 4000 3250 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4000 3250 50  0001 C CNN
 F 3 "~" H 4000 3250 50  0001 C CNN
 	1    4000 3250
 	1    0    0    -1  
@@ -1272,7 +1266,7 @@ U 1 1 5E86C9E0
 P 5350 1450
 F 0 "J4" H 5450 1416 50  0000 L CNN
 F 1 "Conn_01x02" H 5430 1549 50  0001 L CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 5350 1450 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 5350 1450 50  0001 C CNN
 F 3 "~" H 5350 1450 50  0001 C CNN
 	1    5350 1450
 	1    0    0    -1  
@@ -1283,7 +1277,7 @@ U 1 1 5E87C255
 P 5350 4000
 F 0 "J5" H 5450 3966 50  0000 L CNN
 F 1 "Conn_01x02" H 5430 4099 50  0001 L CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 5350 4000 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 5350 4000 50  0001 C CNN
 F 3 "~" H 5350 4000 50  0001 C CNN
 	1    5350 4000
 	1    0    0    -1  
@@ -1294,7 +1288,7 @@ U 1 1 5E873729
 P 7250 1400
 F 0 "J6" H 7350 1366 50  0000 L CNN
 F 1 "Conn_01x02" H 7330 1499 50  0001 L CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 7250 1400 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 7250 1400 50  0001 C CNN
 F 3 "~" H 7250 1400 50  0001 C CNN
 	1    7250 1400
 	1    0    0    -1  
@@ -1305,7 +1299,7 @@ U 1 1 5E8FE325
 P 7250 4000
 F 0 "J7" H 7350 3966 50  0000 L CNN
 F 1 "Conn_01x02" H 7330 4099 50  0001 L CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 7250 4000 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 7250 4000 50  0001 C CNN
 F 3 "~" H 7250 4000 50  0001 C CNN
 	1    7250 4000
 	1    0    0    -1  
@@ -1316,7 +1310,7 @@ U 1 1 5E8BDB15
 P 8950 4050
 F 0 "J8" H 9050 4016 50  0000 L CNN
 F 1 "Conn_01x02" H 9030 4149 50  0001 L CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 8950 4050 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 8950 4050 50  0001 C CNN
 F 3 "~" H 8950 4050 50  0001 C CNN
 	1    8950 4050
 	1    0    0    -1  
@@ -1327,7 +1321,7 @@ U 1 1 5E7EAA66
 P 9050 1400
 F 0 "J9" H 9150 1366 50  0000 L CNN
 F 1 "Conn_01x02" H 9130 1499 50  0001 L CNN
-F 2 "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal" H 9050 1400 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 9050 1400 50  0001 C CNN
 F 3 "~" H 9050 1400 50  0001 C CNN
 	1    9050 1400
 	1    0    0    -1  
@@ -1374,6 +1368,17 @@ F 1 "KSS1201" H 10669 4005 50  0000 L CNN
 F 2 "Buzzer_Beeper:Buzzer_TDK_PS1240P02BT_D12.2mm_H6.5mm" H 10500 3900 50  0001 C CNN
 F 3 "~" H 10490 4050 50  0001 C CNN
 	1    10500 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Barrel_Jack_Switch J1
+U 1 1 5E85015B
+P 800 900
+F 0 "J1" H 800 1118 50  0000 C CNN
+F 1 "PJ-202A" H 800 650 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 850 860 50  0001 C CNN
+F 3 "~" H 850 860 50  0001 C CNN
+	1    800  900 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1451,17 +1456,6 @@ F 1 "IRLIZ44NPBF" H 10405 4645 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10400 4700 50  0001 C CNN
 F 3 "~" H 10200 4600 50  0001 C CNN
 	1    10200 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Barrel_Jack_MountingPin J1
-U 1 1 5E87BC82
-P 900 900
-F 0 "J1" H 900 1137 50  0000 C CNN
-F 1 "Barrel_Jack_MountingPin" H 900 1149 50  0001 C CNN
-F 2 "" H 950 860 50  0001 C CNN
-F 3 "~" H 950 860 50  0001 C CNN
-	1    900  900 
 	1    0    0    -1  
 $EndComp
 $Comp
