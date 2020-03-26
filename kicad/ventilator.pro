@@ -1,4 +1,4 @@
-update=Tue 24 Mar 2020 10:41:48 PM PDT
+update=Wed 25 Mar 2020 06:56:48 PM PDT
 version=1
 last_client=kicad
 [general]
@@ -12,10 +12,16 @@ NetIExt=net
 version=1
 LibDir=
 [eeschema/libraries]
-[SchematicFrame]
+[schematic_editor]
 version=1
-[sheetnames]
-1=00000000-0000-0000-0000-00005e7aeb41:
+PageLayoutDescrFile=empty.kicad_wks
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -37,7 +43,7 @@ MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
-CopperEdgeClearance=0
+CopperEdgeClearance=-0.01
 TrackWidth1=0.25
 ViaDiameter1=0.8
 ViaDrill1=0.4
@@ -235,7 +241,7 @@ Enabled=1
 [pcbnew/Layer.F.Fab]
 Enabled=1
 [pcbnew/Layer.Rescue]
-Enabled=0
+Enabled=1
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
@@ -248,24 +254,7 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
-[schematic_editor]
+[SchematicFrame]
 version=1
-PageLayoutDescrFile=empty.kicad_wks
-PlotDirectoryName=./
-NetFmtName=
-SpiceAjustPassiveValues=0
-SubpartIdSeparator=0
-SubpartFirstId=65
-LabSize=50
-TextOffsetRatio=0.08
-LineThickness=5.984251968503937
-BusThickness=12
-WireThickness=6
-JunctionSize=40
-FieldNameTemplates=(templatefields)
-ERC_TestSimilarLabels=1
-ERC_CheckUniqueGlobalLabels=1
-ERC_CheckBusDriverConflicts=1
-ERC_CheckBusEntryConflicts=1
-ERC_CheckBusToBusConflicts=1
-ERC_CheckBusToNetConflicts=1
+[sheetnames]
+1=00000000-0000-0000-0000-00005e7c101c:
