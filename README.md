@@ -1,36 +1,12 @@
-The old pins are:.
+Inspiration valve OPEN: D10 (pwm)
 
-Fill valve: d10.
+Inspiration valve CLOSE: D11 (pwm, unless tone used, then dio)
 
-Inspiration valve: d9 - OPEN, d13 - CLOSE
+Exhalation valve OPEN: D6 (pwm)
 
-Expiration valve: d6 - OPEN, d8 - CLOSE
+Exhalation valve CLOSE: D3 (pwm, unless tone used, then dio)
 
-Buzzer: d7.
-
-Lcd data: d5-d2.
-
-Lcd enable: d11
-
-Lcd register select: d12
-
-Potentiometers: a0-a2.
-
-----------
-
-The new pins are:.
-
-Inspiration valve OPEN: D11 (pwm)
-
-Inspiration valve CLOSE: D5 (pwm)
-
-Expiration valve OPEN: D9 (pwm)
-
-Expiration valve CLOSE: D6 (pwm)
-
-Fill valve OPEN: D11 (pwm, unless tone used, then dio)
-
-Fill valve CLOSE: D3 (pwm, unless tone used, then dio)
+Fill solenoid valve: D9 (pwm)
 
 LCD DIO7: D8
 
