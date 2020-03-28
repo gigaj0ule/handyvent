@@ -539,7 +539,7 @@ LCD_DIO7
 Text Label 1600 3150 0    50   ~ 0
 EXP_OPEN
 Text Label 1600 3250 0    50   ~ 0
-FILL
+INS_OPEN
 Text Label 1600 3350 0    50   ~ 0
 FILL_OPEN
 Text Label 1600 3450 0    50   ~ 0
