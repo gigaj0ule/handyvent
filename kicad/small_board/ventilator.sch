@@ -79,6 +79,8 @@ Wire Wire Line
 Wire Wire Line
 	1200 1000 1200 1300
 Wire Wire Line
+	1200 2600 1200 2700
+Wire Wire Line
 	1200 4700 1200 4900
 Wire Wire Line
 	1200 5200 1200 5450
@@ -601,6 +603,17 @@ LCD_DIO7
 Text Label 10300 4400 0    50   ~ 0
 Q7_D
 $Comp
+L Connector:TestPoint TP?
+U 1 1 5E86FE32
+P 1200 2600
+F 0 "TP?" H 1150 2829 50  0000 L CNN
+F 1 "TestPoint" H 1258 2573 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Horizontal" H 1400 2600 50  0001 C CNN
+F 3 "~" H 1400 2600 50  0001 C CNN
+	1    1200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
 L power:+5V #PWR03
 U 1 1 5E84D8ED
 P 1200 4700
@@ -763,6 +776,17 @@ F 1 "GND" H 1205 1127 50  0000 C CNN
 F 2 "" H 1200 1300 50  0001 C CNN
 F 3 "" H 1200 1300 50  0001 C CNN
 	1    1200 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E871D76
+P 1200 2700
+F 0 "#PWR?" H 1200 2450 50  0001 C CNN
+F 1 "GND" H 1200 2496 50  0000 C CNN
+F 2 "" H 1200 2700 50  0001 C CNN
+F 3 "" H 1200 2700 50  0001 C CNN
+	1    1200 2700
 	1    0    0    -1  
 $EndComp
 $Comp
