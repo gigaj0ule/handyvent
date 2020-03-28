@@ -1,0 +1,575 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6000 4600 6000 5100
+Wire Wire Line
+	6000 5100 6700 5100
+Wire Wire Line
+	6700 5100 7000 5100
+Wire Wire Line
+	7000 5100 7800 5100
+Wire Wire Line
+	7800 5100 8100 5100
+Wire Wire Line
+	8100 5100 8100 4600
+Wire Wire Line
+	7000 4600 7000 5100
+Wire Wire Line
+	7000 5100 7000 5300
+Wire Wire Line
+	5700 5000 5700 5100
+Wire Wire Line
+	5700 5100 6000 5100
+Wire Wire Line
+	6700 5000 6700 5100
+Wire Wire Line
+	7800 5000 7800 5100
+Connection ~ 7000 5100
+Connection ~ 6000 5100
+Connection ~ 6700 5100
+Connection ~ 7800 5100
+Text Label 6000 4600 0    10   ~ 0
+GND
+Wire Wire Line
+	5500 3500 5700 3500
+Wire Wire Line
+	5700 3500 5700 3700
+Text Label 5500 3500 0    10   ~ 0
+GND
+Wire Wire Line
+	1200 4000 1200 4200
+Wire Wire Line
+	1200 4200 1900 4200
+Wire Wire Line
+	1900 4200 2600 4200
+Wire Wire Line
+	2600 4200 2600 4000
+Wire Wire Line
+	1900 4000 1900 4200
+Wire Wire Line
+	1900 4200 1900 4300
+Connection ~ 1900 4200
+Text Label 1200 4000 0    10   ~ 0
+GND
+Wire Wire Line
+	2200 6300 3000 6300
+Wire Wire Line
+	3000 6300 3000 6400
+Text Label 2200 6300 0    10   ~ 0
+GND
+Wire Wire Line
+	5800 4500 5700 4500
+Wire Wire Line
+	5700 4500 5200 4500
+Wire Wire Line
+	5700 4600 5700 4500
+Connection ~ 5700 4500
+Text Label 5200 4500 0    70   ~ 0
+FILL_FET
+Wire Wire Line
+	4700 4800 4800 4800
+Text Label 4800 4800 0    70   ~ 0
+FILL_FET
+Wire Wire Line
+	6800 4500 6700 4500
+Wire Wire Line
+	6700 4500 6500 4500
+Wire Wire Line
+	6700 4600 6700 4500
+Connection ~ 6700 4500
+Text Label 6500 4500 0    70   ~ 0
+INHALE_FET
+Wire Wire Line
+	4700 4700 4800 4700
+Text Label 4800 4700 0    70   ~ 0
+INHALE_FET
+Wire Wire Line
+	7900 4500 7800 4500
+Wire Wire Line
+	7800 4500 7600 4500
+Wire Wire Line
+	7800 4600 7800 4500
+Connection ~ 7800 4500
+Text Label 7600 4500 0    70   ~ 0
+EXHALE_FET
+Wire Wire Line
+	4700 4300 4800 4300
+Text Label 4800 4300 0    70   ~ 0
+EXHALE_FET
+Wire Wire Line
+	6000 4200 6000 4000
+Wire Wire Line
+	7000 4200 7000 4000
+Wire Wire Line
+	8100 4200 8100 4000
+Wire Wire Line
+	7000 3700 7000 3400
+Wire Wire Line
+	7000 3400 6000 3400
+Wire Wire Line
+	6000 3400 6000 3700
+Wire Wire Line
+	7000 3400 8100 3400
+Wire Wire Line
+	8100 3400 8100 3700
+Wire Wire Line
+	7000 3400 7000 3200
+Connection ~ 7000 3400
+Wire Wire Line
+	4700 4400 4800 4400
+Text Label 4800 4400 0    70   ~ 0
+BUZZER
+Wire Wire Line
+	5100 3500 4700 3500
+Text Label 4700 3500 0    70   ~ 0
+BUZZER
+Wire Wire Line
+	1200 3600 1200 3400
+Wire Wire Line
+	1200 3400 1900 3400
+Wire Wire Line
+	1900 3400 2600 3400
+Wire Wire Line
+	2600 3400 2600 3600
+Wire Wire Line
+	1900 3600 1900 3400
+Wire Wire Line
+	1900 3400 1900 3300
+Connection ~ 1900 3400
+Wire Wire Line
+	3300 4200 3000 4200
+Text Label 3000 4200 0    70   ~ 0
+POT0
+Wire Wire Line
+	1400 3800 1500 3800
+Text Label 1500 3800 0    70   ~ 0
+POT0
+Wire Wire Line
+	3300 4300 3000 4300
+Text Label 3000 4300 0    70   ~ 0
+POT1
+Wire Wire Line
+	2100 3800 2200 3800
+Text Label 2200 3800 0    70   ~ 0
+POT1
+Wire Wire Line
+	3300 4400 3000 4400
+Text Label 3000 4400 0    70   ~ 0
+POT2
+Wire Wire Line
+	2800 3800 2900 3800
+Text Label 2900 3800 0    70   ~ 0
+POT2
+Wire Wire Line
+	2200 5200 2300 5200
+Text Label 2300 5200 0    70   ~ 0
+LCD_D5
+Wire Wire Line
+	4700 4000 4800 4000
+Text Label 4800 4000 0    70   ~ 0
+LCD_D5
+Wire Wire Line
+	2200 5300 2300 5300
+Text Label 2300 5300 0    70   ~ 0
+LCD_D4
+Wire Wire Line
+	4700 3900 4800 3900
+Text Label 4800 3900 0    70   ~ 0
+LCD_D4
+Wire Wire Line
+	2200 5500 2300 5500
+Wire Wire Line
+	2200 6000 2300 6000
+Text Label 2300 6000 0    70   ~ 0
+LCD_RS
+Text Label 2300 6000 0    70   ~ 0
+LCD_RS
+Wire Wire Line
+	4700 5000 4800 5000
+Text Label 4800 5000 0    70   ~ 0
+LCD_RS
+Wire Wire Line
+	2200 5800 2300 5800
+Text Label 2300 5800 0    70   ~ 0
+LCD_E
+Wire Wire Line
+	4700 4900 4800 4900
+Text Label 4800 4900 0    70   ~ 0
+LCD_E
+Wire Wire Line
+	2200 5100 2300 5100
+Text Label 2300 5100 0    70   ~ 0
+LCD_D6
+Wire Wire Line
+	4700 4100 4800 4100
+Text Label 4800 4100 0    70   ~ 0
+LCD_D6
+Wire Wire Line
+	2200 5000 2300 5000
+Text Label 2300 5000 0    70   ~ 0
+LCD_D7
+Wire Wire Line
+	4700 4200 4800 4200
+Text Label 4800 4200 0    70   ~ 0
+LCD_D7
+Wire Wire Line
+	2200 6200 3000 6200
+Wire Wire Line
+	3000 6200 3000 6000
+$Comp
+L ventillattor_schem-eagle-import:ARDUINO2009_20 IC1
+U 1 0 7C8C299E06F92037
+P 4000 4300
+F 0 "IC1" H 3500 5250 56  0001 L BNN
+F 1 "ARDUINO2009_20" H 4000 4300 50  0001 C CNN
+F 2 "ventillattor schem:ARDUINO2009" H 4000 4300 50  0001 C CNN
+F 3 "" H 4000 4300 50  0001 C CNN
+	1    4000 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:ARDUINO2009_20 IC1
+U 2 0 7C8C299E06F9203B
+P 4300 2600
+F 0 "IC1" H 3800 3550 56  0001 L BNN
+F 1 "ARDUINO2009_20" H 4300 2600 50  0001 C CNN
+F 2 "ventillattor schem:ARDUINO2009" H 4300 2600 50  0001 C CNN
+F 3 "" H 4300 2600 50  0001 C CNN
+	2    4300 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:ARDUINO2009_20 IC1
+U 3 0 7C8C299E06F9203F
+P 4000 2600
+F 0 "IC1" H 3500 3550 56  0001 L BNN
+F 1 "ARDUINO2009_20" H 4000 2600 50  0001 C CNN
+F 2 "ventillattor schem:ARDUINO2009" H 4000 2600 50  0001 C CNN
+F 3 "" H 4000 2600 50  0001 C CNN
+	3    4000 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:ARDUINO2009_20 IC1
+U 4 0 7C8C299E06F92023
+P 7000 2800
+F 0 "IC1" H 6500 3750 56  0001 L BNN
+F 1 "ARDUINO2009_20" H 7000 2800 50  0001 C CNN
+F 2 "ventillattor schem:ARDUINO2009" H 7000 2800 50  0001 C CNN
+F 3 "" H 7000 2800 50  0001 C CNN
+	4    7000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:PMOSFET_NTO220BV Q1
+U 1 0 3BFCC6B4B0D56F11
+P 5900 4400
+F 0 "Q1" H 6100 4500 59  0000 L BNN
+F 1 "FILL" H 6100 4400 59  0000 L BNN
+F 2 "ventillattor schem:TO220BV" H 5900 4400 50  0001 C CNN
+F 3 "" H 5900 4400 50  0001 C CNN
+	1    5900 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:PMOSFET_NTO220BV Q2
+U 1 0 983DACE195FBB1CA
+P 6900 4400
+F 0 "Q2" H 7100 4500 59  0000 L BNN
+F 1 "INHALE" H 7100 4400 59  0000 L BNN
+F 2 "ventillattor schem:TO220BV" H 6900 4400 50  0001 C CNN
+F 3 "" H 6900 4400 50  0001 C CNN
+	1    6900 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:PMOSFET_NTO220BV Q3
+U 1 0 BBE0842083429588
+P 8000 4400
+F 0 "Q3" H 8200 4500 59  0000 L BNN
+F 1 "EXHALE" H 8200 4400 59  0000 L BNN
+F 2 "ventillattor schem:TO220BV" H 8000 4400 50  0001 C CNN
+F 3 "" H 8000 4400 50  0001 C CNN
+	1    8000 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:GND #GND1
+U 1 0 6F68935FDB8695AC
+P 7000 5400
+F 0 "#GND1" H 7000 5400 50  0001 C CNN
+F 1 "GND" H 6900 5300 59  0000 L BNN
+F 2 "" H 7000 5400 50  0001 C CNN
+F 3 "" H 7000 5400 50  0001 C CNN
+	1    7000 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:R-US_0204_7 R1
+U 1 0 154D678CB9BAFB95
+P 5700 4800
+F 0 "R1" H 5550 4859 59  0000 L BNN
+F 1 "10k" H 5550 4670 59  0000 L BNN
+F 2 "ventillattor schem:0204_7" H 5700 4800 50  0001 C CNN
+F 3 "" H 5700 4800 50  0001 C CNN
+	1    5700 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:R-US_0204_7 R2
+U 1 0 2436C49681BCC900
+P 6700 4800
+F 0 "R2" H 6550 4859 59  0000 L BNN
+F 1 "10k" H 6550 4670 59  0000 L BNN
+F 2 "ventillattor schem:0204_7" H 6700 4800 50  0001 C CNN
+F 3 "" H 6700 4800 50  0001 C CNN
+	1    6700 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:R-US_0204_7 R3
+U 1 0 DF24997026020ECB
+P 7800 4800
+F 0 "R3" H 7650 4859 59  0000 L BNN
+F 1 "10k" H 7650 4670 59  0000 L BNN
+F 2 "ventillattor schem:0204_7" H 7800 4800 50  0001 C CNN
+F 3 "" H 7800 4800 50  0001 C CNN
+	1    7800 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:TERMINAL-BLOCK-3.5MM-2-PIN-LONG-PAD FILL
+U 1 0 C55B34E347B04132
+P 6100 4000
+F 0 "FILL" H 6150 3965 59  0000 L BNN
+F 1 "TERMINAL-BLOCK-3.5MM-2-PIN-LONG-PAD" H 6650 3965 59  0001 L BNN
+F 2 "ventillattor schem:TERMINAL-BLOCK-2-PIN-3.5MM-LONG-PAD" H 6100 4000 50  0001 C CNN
+F 3 "" H 6100 4000 50  0001 C CNN
+	1    6100 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:TERMINAL-BLOCK-3.5MM-2-PIN-LONG-PAD FILL
+U 2 0 C55B34E347B0413E
+P 6100 3700
+F 0 "FILL" H 6150 3665 59  0000 L BNN
+F 1 "TERMINAL-BLOCK-3.5MM-2-PIN-LONG-PAD" H 6650 3665 59  0001 L BNN
+F 2 "ventillattor schem:TERMINAL-BLOCK-2-PIN-3.5MM-LONG-PAD" H 6100 3700 50  0001 C CNN
+F 3 "" H 6100 3700 50  0001 C CNN
+	2    6100 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:TERMINAL-BLOCK-3.5MM-2-PIN-LONG-PAD INHALE
+U 1 0 A569F578853B2BCD
+P 7100 4000
+F 0 "INHALE" H 7150 3965 59  0000 L BNN
+F 1 "TERMINAL-BLOCK-3.5MM-2-PIN-LONG-PAD" H 7650 3965 59  0001 L BNN
+F 2 "ventillattor schem:TERMINAL-BLOCK-2-PIN-3.5MM-LONG-PAD" H 7100 4000 50  0001 C CNN
+F 3 "" H 7100 4000 50  0001 C CNN
+	1    7100 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:TERMINAL-BLOCK-3.5MM-2-PIN-LONG-PAD INHALE
+U 2 0 A569F578853B2BC1
+P 7100 3700
+F 0 "INHALE" H 7150 3665 59  0000 L BNN
+F 1 "TERMINAL-BLOCK-3.5MM-2-PIN-LONG-PAD" H 7650 3665 59  0001 L BNN
+F 2 "ventillattor schem:TERMINAL-BLOCK-2-PIN-3.5MM-LONG-PAD" H 7100 3700 50  0001 C CNN
+F 3 "" H 7100 3700 50  0001 C CNN
+	2    7100 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:TERMINAL-BLOCK-3.5MM-2-PIN-LONG-PAD EXHALE
+U 1 0 7785CF8F329F3F93
+P 8200 4000
+F 0 "EXHALE" H 8250 3965 59  0000 L BNN
+F 1 "TERMINAL-BLOCK-3.5MM-2-PIN-LONG-PAD" H 8750 3965 59  0001 L BNN
+F 2 "ventillattor schem:TERMINAL-BLOCK-2-PIN-3.5MM-LONG-PAD" H 8200 4000 50  0001 C CNN
+F 3 "" H 8200 4000 50  0001 C CNN
+	1    8200 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:TERMINAL-BLOCK-3.5MM-2-PIN-LONG-PAD EXHALE
+U 2 0 7785CF8F329F3F9F
+P 8200 3700
+F 0 "EXHALE" H 8250 3665 59  0000 L BNN
+F 1 "TERMINAL-BLOCK-3.5MM-2-PIN-LONG-PAD" H 8750 3665 59  0001 L BNN
+F 2 "ventillattor schem:TERMINAL-BLOCK-2-PIN-3.5MM-LONG-PAD" H 8200 3700 50  0001 C CNN
+F 3 "" H 8200 3700 50  0001 C CNN
+	2    8200 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:KSS1201 SP1
+U 1 0 AA76E99B8A50F2F1
+P 5300 3500
+F 0 "SP1" H 5150 3750 59  0000 L BNN
+F 1 "KSS1201" H 5150 3375 59  0000 L BNN
+F 2 "ventillattor schem:KSS1201" H 5300 3500 50  0001 C CNN
+F 3 "" H 5300 3500 50  0001 C CNN
+	1    5300 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:GND #GND2
+U 1 0 350FEA2913A376EC
+P 5700 3800
+F 0 "#GND2" H 5700 3800 50  0001 C CNN
+F 1 "GND" H 5600 3700 59  0000 L BNN
+F 2 "" H 5700 3800 50  0001 C CNN
+F 3 "" H 5700 3800 50  0001 C CNN
+	1    5700 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:3RP_1610N R4
+U 1 0 DF0B5EAF23E52A4A
+P 2600 3800
+F 0 "R4" V 2365 3650 59  0000 L BNN
+F 1 "3RP_1610N" V 2450 3650 59  0000 L BNN
+F 2 "ventillattor schem:3RP_1610N" H 2600 3800 50  0001 C CNN
+F 3 "" H 2600 3800 50  0001 C CNN
+	1    2600 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:3RP_1610N R5
+U 1 0 67E99AF6BC5DC3D2
+P 1900 3800
+F 0 "R5" V 1665 3650 59  0000 L BNN
+F 1 "3RP_1610N" V 1750 3650 59  0000 L BNN
+F 2 "ventillattor schem:3RP_1610N" H 1900 3800 50  0001 C CNN
+F 3 "" H 1900 3800 50  0001 C CNN
+	1    1900 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:3RP_1610N R6
+U 1 0 442756392DDEC18F
+P 1200 3800
+F 0 "R6" V 965 3650 59  0000 L BNN
+F 1 "3RP_1610N" V 1050 3650 59  0000 L BNN
+F 2 "ventillattor schem:3RP_1610N" H 1200 3800 50  0001 C CNN
+F 3 "" H 1200 3800 50  0001 C CNN
+	1    1200 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:GND #GND3
+U 1 0 21A7002F7679BDCC
+P 1900 4400
+F 0 "#GND3" H 1900 4400 50  0001 C CNN
+F 1 "GND" H 1800 4300 59  0000 L BNN
+F 2 "" H 1900 4400 50  0001 C CNN
+F 3 "" H 1900 4400 50  0001 C CNN
+	1    1900 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:ARDUINO2009_20 IC2
+U 2 0 53D52AEB541775C6
+P 1900 2900
+F 0 "IC2" H 1400 3850 56  0001 L BNN
+F 1 "ARDUINO2009_20" H 1900 2900 50  0001 C CNN
+F 2 "ventillattor schem:ARDUINO2009" H 1900 2900 50  0001 C CNN
+F 3 "" H 1900 2900 50  0001 C CNN
+	2    1900 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:TUXGR_16X2_R2 DIS1
+U 1 0 243A82E4788EF92D
+P 1800 5600
+F 0 "DIS1" H 1000 6150 59  0000 L BNN
+F 1 "TUXGR_16X2_R2" H 1750 6150 59  0000 L BNN
+F 2 "ventillattor schem:TUXGR_16X2_R2" H 1800 5600 50  0001 C CNN
+F 3 "" H 1800 5600 50  0001 C CNN
+	1    1800 5600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:+5V #SUPPLY1
+U 1 0 57B2A199E46721A6
+P 3000 5900
+F 0 "#SUPPLY1" H 3000 5900 50  0001 C CNN
+F 1 "+5V" H 2925 6025 59  0000 L BNN
+F 2 "" H 3000 5900 50  0001 C CNN
+F 3 "" H 3000 5900 50  0001 C CNN
+	1    3000 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L ventillattor_schem-eagle-import:GND #GND4
+U 1 0 4B4BE4C0D896219B
+P 3000 6500
+F 0 "#GND4" H 3000 6500 50  0001 C CNN
+F 1 "GND" H 2900 6400 59  0000 L BNN
+F 2 "" H 3000 6500 50  0001 C CNN
+F 3 "" H 3000 6500 50  0001 C CNN
+	1    3000 6500
+	1    0    0    -1  
+$EndComp
+Text GLabel 4300 2200 0    10   BiDi ~ 0
++5V
+Text GLabel 4300 3000 0    10   BiDi ~ 0
+GND
+Text GLabel 4000 2200 0    10   BiDi ~ 0
++3V3
+Text GLabel 4000 3000 0    10   BiDi ~ 0
+GND
+Text GLabel 7000 2400 0    10   BiDi ~ 0
++VIN
+Text GLabel 1900 2500 0    10   BiDi ~ 0
++5V
+Text GLabel 1975 7023 0    10   BiDi ~ 0
++3V3
+Text GLabel 1975 7823 0    10   BiDi ~ 0
+GND
+$Comp
+L ventillattor_schem-eagle-import:ARDUINO2009_20 IC2
+U 3 0 6CEFD6799DE6C280
+P 1975 7423
+AR Path="/6CEFD6799DE6C280" Ref="IC2"  Part="3" 
+AR Path="/" Ref="IC2"  Part="3" 
+F 0 "IC2" H 1475 8373 56  0001 L BNN
+F 1 "ARDUINO2009_20" H 1975 7423 50  0001 C CNN
+F 2 "ventillattor schem:ARDUINO2009" H 1975 7423 50  0001 C CNN
+F 3 "" H 1975 7423 50  0001 C CNN
+	3    1975 7423
+	1    0    0    -1  
+$EndComp
+Text GLabel 2802 7823 0    10   BiDi ~ 0
+GND
+Text GLabel 2802 7023 0    10   BiDi ~ 0
++VIN
+$Comp
+L ventillattor_schem-eagle-import:ARDUINO2009_20 IC2
+U 4 0 6CEFD6799DE6C29C
+P 2802 7423
+AR Path="/6CEFD6799DE6C29C" Ref="IC2"  Part="4" 
+AR Path="/" Ref="IC2"  Part="4" 
+F 0 "IC2" H 2302 8373 56  0001 L BNN
+F 1 "ARDUINO2009_20" H 2802 7423 50  0001 C CNN
+F 2 "ventillattor schem:ARDUINO2009" H 2802 7423 50  0001 C CNN
+F 3 "" H 2802 7423 50  0001 C CNN
+	4    2802 7423
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -1,4 +1,4 @@
-update=Wed 25 Mar 2020 08:29:23 PM PDT
+update=Fri 27 Mar 2020 06:31:12 PM PDT
 version=1
 last_client=kicad
 [general]
@@ -22,6 +22,10 @@ NetFmtName=
 SpiceAjustPassiveValues=0
 LabSize=50
 ERC_TestSimilarLabels=1
+[SchematicFrame]
+version=1
+[sheetnames]
+1=00000000-0000-0000-0000-00005e857aeb:
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -43,7 +47,7 @@ MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
-CopperEdgeClearance=-0.01
+CopperEdgeClearance=0
 TrackWidth1=0.25
 ViaDiameter1=0.8
 ViaDrill1=0.4
@@ -241,7 +245,7 @@ Enabled=1
 [pcbnew/Layer.F.Fab]
 Enabled=1
 [pcbnew/Layer.Rescue]
-Enabled=1
+Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default
@@ -254,7 +258,3 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
-[SchematicFrame]
-version=1
-[sheetnames]
-1=00000000-0000-0000-0000-00005e857aeb:
