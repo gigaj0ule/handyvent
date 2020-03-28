@@ -539,7 +539,7 @@ LCD_DIO7
 Text Label 1600 3150 0    50   ~ 0
 EXP_OPEN
 Text Label 1600 3250 0    50   ~ 0
-FILL
+INS_OPEN
 Text Label 1600 3350 0    50   ~ 0
 FILL_OPEN
 Text Label 1600 3450 0    50   ~ 0
@@ -564,14 +564,26 @@ Text Label 4000 2000 0    50   ~ 0
 EXP_OPEN
 Text Label 4000 4550 0    50   ~ 0
 EXP_CLOSE
+Text Label 5050 1800 0    50   ~ 0
+Q1_D
+Text Label 5050 4350 0    50   ~ 0
+Q2_D
 Text Label 5900 1950 0    50   ~ 0
 INS_OPEN
 Text Label 5900 4550 0    50   ~ 0
 INS_CLOSE
+Text Label 6950 1750 0    50   ~ 0
+Q3_D
+Text Label 6950 4350 0    50   ~ 0
+Q4_D
 Text Label 7600 4600 0    50   ~ 0
 FILL_CLOSE
 Text Label 7700 1950 0    50   ~ 0
 FILL_OPEN
+Text Label 8650 4400 0    50   ~ 0
+Q5_D
+Text Label 8750 1750 0    50   ~ 0
+Q6_D
 Text Label 9450 4600 0    50   ~ 0
 BUZZER
 Text Label 9800 1200 2    50   ~ 0
@@ -586,6 +598,8 @@ Text Label 9800 2300 2    50   ~ 0
 LCD_DIO6
 Text Label 9800 2400 2    50   ~ 0
 LCD_DIO7
+Text Label 10300 4400 0    50   ~ 0
+Q7_D
 $Comp
 L power:+5V #PWR03
 U 1 1 5E84D8ED

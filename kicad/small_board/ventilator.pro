@@ -1,4 +1,4 @@
-update=Fri 27 Mar 2020 06:57:22 PM PDT
+update=Fri 27 Mar 2020 07:48:03 PM PDT
 version=1
 last_client=kicad
 [general]
@@ -22,6 +22,8 @@ NetFmtName=
 SpiceAjustPassiveValues=0
 LabSize=50
 ERC_TestSimilarLabels=1
+[SchematicFrame]
+version=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -44,9 +46,9 @@ MinHoleToHole=0.25
 RequireCourtyardDefinitions=0
 ProhibitOverlappingCourtyards=1
 CopperEdgeClearance=0
-TrackWidth1=0.25
-ViaDiameter1=0.8
-ViaDrill1=0.4
+TrackWidth1=0.5
+ViaDiameter1=1.6
+ViaDrill1=0.8
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
@@ -75,7 +77,7 @@ DimensionPrecision=1
 SolderMaskClearance=0
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=0
+SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
@@ -246,15 +248,24 @@ Enabled=0
 [pcbnew/Netclasses/Default]
 Name=Default
 Clearance=0.2
-TrackWidth=0.25
-ViaDiameter=0.8
-ViaDrill=0.4
+TrackWidth=0.5
+ViaDiameter=1.6
+ViaDrill=0.8
 uViaDiameter=0.3
 uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
-[SchematicFrame]
-version=1
+[pcbnew/Netclasses/1]
+Name=12V
+Clearance=0.2
+TrackWidth=1
+ViaDiameter=1.6
+ViaDrill=0.8
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
 [sheetnames]
 1=00000000-0000-0000-0000-00005e7eafa2:
