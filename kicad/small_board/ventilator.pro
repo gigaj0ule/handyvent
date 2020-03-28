@@ -1,4 +1,4 @@
-update=Fri 27 Mar 2020 06:31:12 PM PDT
+update=Fri 27 Mar 2020 06:57:22 PM PDT
 version=1
 last_client=kicad
 [general]
@@ -22,10 +22,6 @@ NetFmtName=
 SpiceAjustPassiveValues=0
 LabSize=50
 ERC_TestSimilarLabels=1
-[SchematicFrame]
-version=1
-[sheetnames]
-1=00000000-0000-0000-0000-00005e857aeb:
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -258,3 +254,7 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
+[SchematicFrame]
+version=1
+[sheetnames]
+1=00000000-0000-0000-0000-00005e7eafa2:

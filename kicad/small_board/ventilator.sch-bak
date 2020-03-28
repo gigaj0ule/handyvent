@@ -235,6 +235,8 @@ Wire Wire Line
 Wire Wire Line
 	4350 5150 4650 5150
 Wire Wire Line
+	4350 6550 4350 6800
+Wire Wire Line
 	4650 2000 4650 2100
 Wire Wire Line
 	4650 2300 4650 2600
@@ -246,6 +248,8 @@ Wire Wire Line
 	4750 2000 4650 2000
 Wire Wire Line
 	4750 4550 4650 4550
+Wire Wire Line
+	4750 6550 4750 6800
 Wire Wire Line
 	4900 1300 4900 1400
 Wire Wire Line
@@ -298,6 +302,10 @@ Wire Wire Line
 	5150 4000 5050 4000
 Wire Wire Line
 	5150 4100 5050 4100
+Wire Wire Line
+	5150 6550 5150 6800
+Wire Wire Line
+	5550 6550 5550 6800
 Wire Wire Line
 	6250 1950 5900 1950
 Wire Wire Line
@@ -810,6 +818,28 @@ F 3 "" H 2900 4250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
+L power:GND #PWR0104
+U 1 1 5E8735F7
+P 4350 6800
+F 0 "#PWR0104" H 4350 6550 50  0001 C CNN
+F 1 "GND" H 4350 6646 50  0000 C CNN
+F 2 "" H 4350 6800 50  0001 C CNN
+F 3 "" H 4350 6800 50  0001 C CNN
+	1    4350 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5E874652
+P 4750 6800
+F 0 "#PWR0103" H 4750 6550 50  0001 C CNN
+F 1 "GND" H 4750 6646 50  0000 C CNN
+F 2 "" H 4750 6800 50  0001 C CNN
+F 3 "" H 4750 6800 50  0001 C CNN
+	1    4750 6800
+	1    0    0    -1  
+$EndComp
+$Comp
 L power:GND #PWR016
 U 1 1 5E86C9CC
 P 5050 2650
@@ -829,6 +859,28 @@ F 1 "GND" H 5050 4996 50  0000 C CNN
 F 2 "" H 5050 5200 50  0001 C CNN
 F 3 "" H 5050 5200 50  0001 C CNN
 	1    5050 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5E8751C6
+P 5150 6800
+F 0 "#PWR0102" H 5150 6550 50  0001 C CNN
+F 1 "GND" H 5150 6646 50  0000 C CNN
+F 2 "" H 5150 6800 50  0001 C CNN
+F 3 "" H 5150 6800 50  0001 C CNN
+	1    5150 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5E8756FC
+P 5550 6800
+F 0 "#PWR0101" H 5550 6550 50  0001 C CNN
+F 1 "GND" H 5550 6646 50  0000 C CNN
+F 2 "" H 5550 6800 50  0001 C CNN
+F 3 "" H 5550 6800 50  0001 C CNN
+	1    5550 6800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1236,6 +1288,50 @@ F 1 "DNP" H 3100 6781 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 3000 6800 50  0001 C CNN
 F 3 "~" H 3000 6800 50  0001 C CNN
 	1    3000 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5E86D998
+P 4350 6450
+F 0 "H1" H 4450 6447 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4450 6492 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 4350 6450 50  0001 C CNN
+F 3 "~" H 4350 6450 50  0001 C CNN
+	1    4350 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5E86E6A0
+P 4750 6450
+F 0 "H2" H 4850 6447 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4850 6492 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 4750 6450 50  0001 C CNN
+F 3 "~" H 4750 6450 50  0001 C CNN
+	1    4750 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5E8700AE
+P 5150 6450
+F 0 "H3" H 5250 6447 50  0000 L CNN
+F 1 "MountingHole_Pad" H 5250 6492 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 5150 6450 50  0001 C CNN
+F 3 "~" H 5150 6450 50  0001 C CNN
+	1    5150 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 5E870B72
+P 5550 6450
+F 0 "H4" H 5650 6447 50  0000 L CNN
+F 1 "MountingHole_Pad" H 5650 6492 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 5550 6450 50  0001 C CNN
+F 3 "~" H 5550 6450 50  0001 C CNN
+	1    5550 6450
 	1    0    0    -1  
 $EndComp
 $Comp
