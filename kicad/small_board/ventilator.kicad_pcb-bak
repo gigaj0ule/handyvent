@@ -3661,7 +3661,7 @@
     )
   )
 
-  (gr_text "POT 1" (at 15.24 6.35) (layer "B.SilkS") (tstamp 8db9009e-c605-46c5-8b18-4163a20a8b7f)
+  (gr_text "POT 3" (at 15.24 6.35) (layer "B.SilkS") (tstamp 8db9009e-c605-46c5-8b18-4163a20a8b7f)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
   (gr_text "POT 2" (at 33.02 6.35) (layer "B.SilkS") (tstamp 5a69c42f-b5f9-48b1-bd00-4fd60dd2444a)
