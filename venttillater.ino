@@ -126,7 +126,7 @@ void setExhaleValveState(bool setState) {
 void checkKnobs() {
   time_fill = (TIME_FILL_MIN + ((TIME_FILL_MAX - TIME_FILL_MIN)*knobRead(KNOB_FILL))/1023);
 
-  uint32_t cycles_per_min = (CYCLES_PER_MINUTE_MIN + ((CYCLES_PER_MINUTE_MAX - CYCLES_PER_MINUTE_MIN)*knobRead(KNOB_CYCLES_PER_MINUTE))/1023);
+  float cycles_per_min = (CYCLES_PER_MINUTE_MIN + ((CYCLES_PER_MINUTE_MAX - CYCLES_PER_MINUTE_MIN)*knobRead(KNOB_CYCLES_PER_MINUTE))/1023);
   uint32_t cycle_duration = 60000ul / cycles_per_min;
   float inhale_exhale_denominator = (INHALE_EXHALE_RATIO_MIN + ((INHALE_EXHALE_RATIO_MAX - INHALE_EXHALE_RATIO_MIN)*knobRead(KNOB_INHALE_EXHALE_RATIO))/1023);
 
