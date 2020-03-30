@@ -1,13 +1,7 @@
+#include "knob.hpp"
+
 #define VERSIONSTRING   "VENTTILLATER.git version 1.0" // 16 characters per line
 #define SERIAL_BAUD_RATE            57600
-
-#define CYCLES_PER_MINUTE_MIN       10
-#define CYCLES_PER_MINUTE_MAX       40
-#define INHALE_EXHALE_RATIO_MIN     1.0f // technically actually exhale/inhale ratio
-#define INHALE_EXHALE_RATIO_MAX     5.0f // but this seems common terminology
-
-#define TIME_FILL_MIN               100ul
-#define TIME_FILL_MAX               5000ul
 
 #define TIME_NEITHER_OPEN           100ul // time between closing one valve and opening another
 #define TIME_VALVE_FULLCURRENT      50 // time to give solenoid full current
@@ -15,10 +9,14 @@
 #define PWM_VALVE_GRAB              255 // assuming power source matches solenoid voltage this is 255
 #define PWM_VALVE_HOLD              100 // PWM value to keep solenoid latched
 
-#define KNOB_FILL                   A2
-#define KNOB_CYCLES_PER_MINUTE      A1
-#define KNOB_INHALE_EXHALE_RATIO    A0
-#define OVERSAMPLES                 25 // number of times analogRead() is repeated per read
+// Reservoir fill time knob
+Knob time_fill_knob(A2, 100.0f, 5000.0f);
+
+// Venitilation cycles per minute knob
+Knob cycles_per_minute_knob(A1, 10.0f, 40.0f);
+
+// Technically exhale/inhale ratio. But this seem common terminology.
+Knob inhale_exhale_ratio_knob(A0, 1.0f, 5.0f);
 
 #define VALVE_FILL              6
 #define VALVE_INHALE_OPEN       9
@@ -123,24 +121,17 @@ void setExhaleValveState(bool setState) {
   }
 }
 
+// Check the knobs and update global state. This currently
+// samples each knob multiple times and performs lots of
+// floating point computation.
 void checkKnobs() {
-  time_fill = (TIME_FILL_MIN + ((TIME_FILL_MAX - TIME_FILL_MIN)*knobRead(KNOB_FILL))/1023);
+  float cycle_duration = 60000.0f / cycles_per_minute_knob.read();
 
-  float cycles_per_min = (CYCLES_PER_MINUTE_MIN + ((CYCLES_PER_MINUTE_MAX - CYCLES_PER_MINUTE_MIN)*knobRead(KNOB_CYCLES_PER_MINUTE))/1023);
-  uint32_t cycle_duration = 60000ul / cycles_per_min;
-  float inhale_exhale_denominator = (INHALE_EXHALE_RATIO_MIN + ((INHALE_EXHALE_RATIO_MAX - INHALE_EXHALE_RATIO_MIN)*knobRead(KNOB_INHALE_EXHALE_RATIO))/1023);
-
-  time_inhale = cycle_duration / (1.0f + inhale_exhale_denominator);
+  time_fill = time_fill_knob.read();
+  time_inhale = cycle_duration / (1.0f + inhale_exhale_ratio_knob.read());
   time_exhale = cycle_duration - time_inhale;
-  //Serial.println(); // newline after three knobReads
-}
 
-uint16_t knobRead(uint16_t pinNumber) {
-  uint32_t analogAdder = 0;
-  for (uint16_t j=0; j<OVERSAMPLES; j++) analogAdder += analogRead(pinNumber);
-  uint32_t averageRead = analogAdder / OVERSAMPLES;
-  //Serial.print("	pin "+String(pinNumber)+": "+String(averageRead));
-  return averageRead;
+  //Serial.println(); // newline after three knobReads
 }
 
 void updateLCD() {
