@@ -133,7 +133,6 @@ void setExhaleValveState(bool setState) {
 
 void checkKnobs() {
 
-  // Read knobs
   fill_knob_value += knob_filter_constant * (knobRead(KNOB_FILL) - fill_knob_value);
   cpm_knob_value += knob_filter_constant * (knobRead(KNOB_CYCLES_PER_MINUTE) - cpm_knob_value);
   ie_knob_value += knob_filter_constant * (knobRead(KNOB_INHALE_EXHALE_RATIO) - ie_knob_value);
