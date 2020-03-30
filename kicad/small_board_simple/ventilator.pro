@@ -1,4 +1,4 @@
-update=Sun 29 Mar 2020 08:02:52 PM PDT
+update=Monday, March 30, 2020 at 04:57:15 AM
 version=1
 last_client=kicad
 [general]
@@ -258,8 +258,6 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
-[SchematicFrame]
-version=1
 [schematic_editor]
 version=1
 PageLayoutDescrFile=empty.kicad_wks
@@ -284,3 +282,5 @@ ERC_CheckBusToNetConflicts=1
 version=1
 [sheetnames]
 1=00000000-0000-0000-0000-00005e816022:
+[SchematicFrame]
+version=1

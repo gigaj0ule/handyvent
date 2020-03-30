@@ -18,7 +18,7 @@
 #define KNOB_FILL                   A2
 #define KNOB_CYCLES_PER_MINUTE      A1
 #define KNOB_INHALE_EXHALE_RATIO    A0
-#define OVERSAMPLES                 25 // number of times analogRead() is repeated per read
+#define OVERSAMPLES                 2 // number of times analogRead() is repeated per knobRead
 
 #define VALVE_FILL              6
 #define VALVE_INHALE_OPEN       9
@@ -53,13 +53,19 @@ uint32_t time_inhale;	 // time to inhale
 uint32_t time_exhale;	 // time to exhale
 uint32_t time_start_ventilate; // record the time at start of cycle
 
+float fill_knob_value = 0;
+float cpm_knob_value = 0;
+float ie_knob_value = 0;
+
+float knob_filter_constant = 0.2f;
+
 void ventilate() {
   uint32_t cycle_time = millis() - time_start_ventilate;
-  
-  setFillSolenoidState((cycle_time < time_fill)
-                            && (cycle_time < time_exhale)); // set fill valve
-  // FILL VALVE WILL CLOSE WHEN EXHALE ENDS REGARDLESS OF FILL TIME SETTING
 
+  // Set fill valve
+  // FILL VALVE WILL CLOSE WHEN EXHALE ENDS REGARDLESS OF FILL TIME SETTING
+  setFillSolenoidState((cycle_time < time_fill) && (cycle_time < time_exhale));
+  
   setInhaleValveState(cycle_time < time_exhale); // set exhale valve
 
   /*
@@ -67,14 +73,16 @@ void ventilate() {
                               && (cycle_time < (time_inhale + time_exhale + TIME_NEITHER_OPEN))); // set inhale valve
   */
 
-  if (cycle_time > (time_inhale + time_exhale)){// + (TIME_NEITHER_OPEN * 2))) {
+  if (cycle_time > (time_inhale + time_exhale)){  // + (TIME_NEITHER_OPEN * 2))) {
 
     // record the present time and restart the cycle
     time_start_ventilate = millis(); 
     
     Serial.println("Restart time_start_ventilate at "+String(time_start_ventilate));
+
+    uint32_t total_time = time_fill + time_inhale + time_exhale;
     
-    Serial.println("	time_fill:"+String(time_fill)+"	time_inhale:"+String(time_inhale)+"	time_exhale:"+String(time_exhale));
+    Serial.println("	time_fill:" + String(time_fill) + "	time_inhale:" + String(time_inhale) + "	time_exhale:"+String(time_exhale) + " total_time:" + String(total_time));
   }
 }
 
@@ -124,22 +132,38 @@ void setExhaleValveState(bool setState) {
 }
 
 void checkKnobs() {
-  time_fill = (TIME_FILL_MIN + ((TIME_FILL_MAX - TIME_FILL_MIN)*knobRead(KNOB_FILL))/1023);
 
-  uint32_t cycles_per_min = (CYCLES_PER_MINUTE_MIN + ((CYCLES_PER_MINUTE_MAX - CYCLES_PER_MINUTE_MIN)*knobRead(KNOB_CYCLES_PER_MINUTE))/1023);
-  uint32_t cycle_duration = 60000ul / cycles_per_min;
-  float inhale_exhale_denominator = (INHALE_EXHALE_RATIO_MIN + ((INHALE_EXHALE_RATIO_MAX - INHALE_EXHALE_RATIO_MIN)*knobRead(KNOB_INHALE_EXHALE_RATIO))/1023);
+  // Read knobs
+  fill_knob_value += knob_filter_constant * (knobRead(KNOB_FILL) - fill_knob_value);
+  cpm_knob_value += knob_filter_constant * (knobRead(KNOB_CYCLES_PER_MINUTE) - cpm_knob_value);
+  ie_knob_value += knob_filter_constant * (knobRead(KNOB_INHALE_EXHALE_RATIO) - ie_knob_value);
+
+  // Debug knobs
+  Serial.println("fill_knob:" + String(fill_knob_value) + " cpm_knob:" + String(cpm_knob_value) + " ie_knob:"+String(ie_knob_value));
+
+  // Calc fill time
+  time_fill = (TIME_FILL_MIN + ((TIME_FILL_MAX - TIME_FILL_MIN) * fill_knob_value) / 1023);
+  
+  float cycles_per_min = (CYCLES_PER_MINUTE_MIN + ((CYCLES_PER_MINUTE_MAX - CYCLES_PER_MINUTE_MIN) * cpm_knob_value) / 1023);
+  float cycle_duration = 60000ul / cycles_per_min;
+  float inhale_exhale_denominator = (INHALE_EXHALE_RATIO_MIN + ((INHALE_EXHALE_RATIO_MAX - INHALE_EXHALE_RATIO_MIN) * ie_knob_value)/1023);
 
   time_inhale = cycle_duration / (1.0f + inhale_exhale_denominator);
   time_exhale = cycle_duration - time_inhale;
+
   //Serial.println(); // newline after three knobReads
 }
 
+
 uint16_t knobRead(uint16_t pinNumber) {
   uint32_t analogAdder = 0;
-  for (uint16_t j=0; j<OVERSAMPLES; j++) analogAdder += analogRead(pinNumber);
+  
+  for (uint16_t j=0; j < OVERSAMPLES; j++) {
+    analogAdder += analogRead(pinNumber);
+  }
+  
   uint32_t averageRead = analogAdder / OVERSAMPLES;
-  //Serial.print("	pin "+String(pinNumber)+": "+String(averageRead));
+
   return averageRead;
 }
 
