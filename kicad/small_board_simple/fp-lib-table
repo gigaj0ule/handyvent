@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "small_board_simple")(type "KiCad")(uri "${KIPRJMOD}/small_board_simple.pretty")(options "")(descr ""))
+)

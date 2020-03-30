@@ -1,4 +1,4 @@
-update=Sunday, March 29, 2020 at 07:20:38 PM
+update=Sun 29 Mar 2020 08:02:52 PM PDT
 version=1
 last_client=kicad
 [general]
@@ -260,8 +260,6 @@ dPairGap=0.25
 dPairViaGap=0.25
 [SchematicFrame]
 version=1
-[sheetnames]
-1=00000000-0000-0000-0000-00005e815ac3:
 [schematic_editor]
 version=1
 PageLayoutDescrFile=empty.kicad_wks
@@ -282,3 +280,7 @@ ERC_CheckBusDriverConflicts=1
 ERC_CheckBusEntryConflicts=1
 ERC_CheckBusToBusConflicts=1
 ERC_CheckBusToNetConflicts=1
+[ModEditFrame]
+version=1
+[sheetnames]
+1=00000000-0000-0000-0000-00005e816022:

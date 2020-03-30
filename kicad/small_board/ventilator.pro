@@ -1,4 +1,4 @@
-update=Fri 27 Mar 2020 08:30:15 PM PDT
+update=Sun 29 Mar 2020 07:53:42 PM PDT
 version=1
 last_client=kicad
 [general]
@@ -22,6 +22,10 @@ NetFmtName=
 SpiceAjustPassiveValues=0
 LabSize=50
 ERC_TestSimilarLabels=1
+[SchematicFrame]
+version=1
+[sheetnames]
+1=00000000-0000-0000-0000-00005e7ec545:
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -75,7 +79,7 @@ DimensionPrecision=1
 SolderMaskClearance=0
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=-0
+SolderPasteRatio=0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
@@ -265,7 +269,3 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
-[SchematicFrame]
-version=1
-[sheetnames]
-1=00000000-0000-0000-0000-00005e7ec545:
