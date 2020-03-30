@@ -67,7 +67,7 @@ void ventilate() {
                               && (cycle_time < (time_inhale + time_exhale + TIME_NEITHER_OPEN))); // set inhale valve
   */
 
-  if (cycle_time > (time_inhale + time_exhale + (TIME_NEITHER_OPEN * 2))) {
+  if (cycle_time > (time_inhale + time_exhale)){// + (TIME_NEITHER_OPEN * 2))) {
 
     // record the present time and restart the cycle
     time_start_ventilate = millis(); 
