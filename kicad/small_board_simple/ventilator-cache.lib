@@ -1,0 +1,345 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# ventilator-rescue_+12V-power
+#
+DEF ventilator-rescue_+12V-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "ventilator-rescue_+12V-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +12V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_+3V3-power
+#
+DEF ventilator-rescue_+3V3-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "ventilator-rescue_+3V3-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_+5V-power
+#
+DEF ventilator-rescue_+5V-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "ventilator-rescue_+5V-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +5V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_Arduino_UNO_R3-MCU_Module
+#
+DEF ventilator-rescue_Arduino_UNO_R3-MCU_Module A 0 40 Y Y 1 F N
+F0 "A" -200 1050 50 H V R CNN
+F1 "ventilator-rescue_Arduino_UNO_R3-MCU_Module" -200 950 50 H V R CNN
+F2 "Module:Arduino_UNO_R3" 150 -1050 50 H I L CNN
+F3 "" -200 1050 50 H I C CNN
+$FPLIST
+ Arduino*UNO*R3*
+$ENDFPLIST
+DRAW
+S -400 900 400 -1000 0 1 10 f
+X NC 1 -500 -800 100 R 50 50 1 1 N N
+X A1 10 500 -100 100 L 50 50 1 1 B
+X A2 11 500 -200 100 L 50 50 1 1 B
+X A3 12 500 -300 100 L 50 50 1 1 B
+X A4/SDA 13 500 -400 100 L 50 50 1 1 B
+X A5/SCL 14 500 -500 100 L 50 50 1 1 B
+X D0/RX 15 -500 600 100 R 50 50 1 1 B
+X D1/TX 16 -500 500 100 R 50 50 1 1 B
+X D2 17 -500 400 100 R 50 50 1 1 B
+X D3 18 -500 300 100 R 50 50 1 1 B
+X D4 19 -500 200 100 R 50 50 1 1 B
+X IOREF 2 500 400 100 L 50 50 1 1 O
+X D5 20 -500 100 100 R 50 50 1 1 B
+X D6 21 -500 0 100 R 50 50 1 1 B
+X D7 22 -500 -100 100 R 50 50 1 1 B
+X D8 23 -500 -200 100 R 50 50 1 1 B
+X D9 24 -500 -300 100 R 50 50 1 1 B
+X D10 25 -500 -400 100 R 50 50 1 1 B
+X D11 26 -500 -500 100 R 50 50 1 1 B
+X D12 27 -500 -600 100 R 50 50 1 1 B
+X D13 28 -500 -700 100 R 50 50 1 1 B
+X GND 29 -100 -1100 100 U 50 50 1 1 W
+X RESET 3 500 600 100 L 50 50 1 1 I
+X AREF 30 500 200 100 L 50 50 1 1 I
+X SDA 31 500 -700 100 L 50 50 1 1 B
+X SCL 32 500 -800 100 L 50 50 1 1 B
+X 3V3 4 100 1000 100 D 50 50 1 1 w
+X +5V 5 200 1000 100 D 50 50 1 1 w
+X GND 6 0 -1100 100 U 50 50 1 1 W
+X GND 7 100 -1100 100 U 50 50 1 1 W
+X VIN 8 -100 1000 100 D 50 50 1 1 W
+X A0 9 500 0 100 L 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_Barrel_Jack_Switch-Connector
+#
+DEF ventilator-rescue_Barrel_Jack_Switch-Connector J 0 20 Y N 1 F N
+F0 "J" 0 210 50 H V C CNN
+F1 "ventilator-rescue_Barrel_Jack_Switch-Connector" 0 -200 50 H V C CNN
+F2 "" 50 -40 50 H I C CNN
+F3 "" 50 -40 50 H I C CNN
+$FPLIST
+ BarrelJack*
+$ENDFPLIST
+DRAW
+A -130 100 25 901 -901 0 1 10 F -130 125 -130 75
+A -130 100 25 901 -901 0 1 10 N -130 125 -130 75
+S -200 150 200 -150 0 1 10 f
+S 145 125 -130 75 0 1 10 F
+P 2 0 1 10 50 -90 75 -65 N
+P 2 0 1 10 200 100 150 100 N
+P 4 0 1 10 200 0 50 0 50 -90 25 -65 N
+P 6 0 1 10 -150 -100 -100 -100 -50 -50 0 -100 100 -100 200 -100 N
+X ~ 1 300 100 100 L 50 50 1 1 P
+X ~ 2 300 -100 100 L 50 50 1 1 P
+X ~ 3 300 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_CP1_Small-Device
+#
+DEF ventilator-rescue_CP1_Small-Device C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "ventilator-rescue_CP1_Small-Device" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ CP_*
+$ENDFPLIST
+DRAW
+A 0 -140 125 1186 614 0 1 12 N -60 -30 60 -30
+P 2 0 1 12 -60 20 60 20 N
+P 2 0 1 0 -50 60 -30 60 N
+P 2 0 1 0 -40 50 -40 70 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_Conn_01x02-Connector_Generic
+#
+DEF ventilator-rescue_Conn_01x02-Connector_Generic J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "ventilator-rescue_Conn_01x02-Connector_Generic" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_D_Small-Device
+#
+DEF ventilator-rescue_D_Small-Device D 0 10 N N 1 F N
+F0 "D" -50 80 50 H V L CNN
+F1 "ventilator-rescue_D_Small-Device" -150 -80 50 H V L CNN
+F2 "" 0 0 50 V I C CNN
+F3 "" 0 0 50 V I C CNN
+$FPLIST
+ TO-???*
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 10 -30 -40 -30 40 N
+P 2 0 1 0 -30 0 30 0 N
+P 4 0 1 10 30 -40 -30 0 30 40 30 -40 N
+X K 1 -100 0 70 R 50 50 1 1 P
+X A 2 100 0 70 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_GND-power
+#
+DEF ventilator-rescue_GND-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "ventilator-rescue_GND-power" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_LED_Small-Device
+#
+DEF ventilator-rescue_LED_Small-Device D 0 10 N N 1 F N
+F0 "D" -50 125 50 H V L CNN
+F1 "ventilator-rescue_LED_Small-Device" -175 -100 50 H V L CNN
+F2 "" 0 0 50 V I C CNN
+F3 "" 0 0 50 V I C CNN
+$FPLIST
+ LED*
+ LED_SMD:*
+ LED_THT:*
+$ENDFPLIST
+DRAW
+P 2 0 1 10 -30 -40 -30 40 N
+P 2 0 1 0 40 0 -30 0 N
+P 4 0 1 10 30 -40 -30 0 30 40 30 -40 N
+P 5 0 1 0 0 30 -20 50 -10 50 -20 50 -20 40 N
+P 5 0 1 0 20 50 0 70 10 70 0 70 0 60 N
+X K 1 -100 0 70 R 50 50 1 1 P
+X A 2 100 0 70 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_MountingHole_Pad-Mechanical
+#
+DEF ventilator-rescue_MountingHole_Pad-Mechanical H 0 40 N N 1 F N
+F0 "H" 0 250 50 H V C CNN
+F1 "ventilator-rescue_MountingHole_Pad-Mechanical" 0 175 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ MountingHole*Pad*
+$ENDFPLIST
+DRAW
+C 0 50 50 0 1 50 N
+X 1 1 0 -100 100 U 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_Q_NMOS_GDS-Device
+#
+DEF ventilator-rescue_Q_NMOS_GDS-Device Q 0 0 Y N 1 F N
+F0 "Q" 200 50 50 H V L CNN
+F1 "ventilator-rescue_Q_NMOS_GDS-Device" 200 -50 50 H V L CNN
+F2 "" 200 100 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+C 65 0 110 0 1 10 N
+C 100 -70 10 0 1 0 F
+C 100 70 10 0 1 0 F
+P 2 0 1 0 10 0 -100 0 N
+P 2 0 1 10 10 75 10 -75 N
+P 2 0 1 10 30 -50 30 -90 N
+P 2 0 1 10 30 20 30 -20 N
+P 2 0 1 10 30 90 30 50 N
+P 2 0 1 0 100 100 100 70 N
+P 3 0 1 0 100 -100 100 0 30 0 N
+P 4 0 1 0 30 -70 130 -70 130 70 30 70 N
+P 4 0 1 0 40 0 80 15 80 -15 40 0 F
+P 4 0 1 0 110 20 115 15 145 15 150 10 N
+P 4 0 1 0 130 15 115 -10 145 -10 130 15 N
+X G 1 -200 0 100 R 50 50 1 1 I
+X D 2 100 200 100 D 50 50 1 1 P
+X S 3 100 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_R_POT-Device
+#
+DEF ventilator-rescue_R_POT-Device RV 0 40 Y N 1 F N
+F0 "RV" -175 0 50 V V C CNN
+F1 "ventilator-rescue_R_POT-Device" -100 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Potentiometer*
+$ENDFPLIST
+DRAW
+S 40 100 -40 -100 0 1 10 N
+P 2 0 1 0 100 0 60 0 N
+P 4 0 1 0 45 0 90 20 90 -20 45 0 F
+X 1 1 0 150 50 D 50 50 1 1 P
+X 2 2 150 0 50 L 50 50 1 1 P
+X 3 3 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_R_Small-Device
+#
+DEF ventilator-rescue_R_Small-Device R 0 10 N N 1 F N
+F0 "R" 30 20 50 H V L CNN
+F1 "ventilator-rescue_R_Small-Device" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -30 70 30 -70 0 1 8 N
+X ~ 1 0 100 30 D 50 50 1 1 P
+X ~ 2 0 -100 30 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_Speaker-Device
+#
+DEF ventilator-rescue_Speaker-Device LS 0 0 Y N 1 F N
+F0 "LS" 50 225 50 H V R CNN
+F1 "ventilator-rescue_Speaker-Device" 50 150 50 H V R CNN
+F2 "" 0 -200 50 H I C CNN
+F3 "" -10 -50 50 H I C CNN
+DRAW
+S -100 50 40 -150 0 0 10 N
+P 4 0 0 10 40 50 140 150 140 -250 40 -150 N
+X 1 1 -200 0 100 R 50 50 1 1 I
+X 2 2 -200 -100 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# ventilator-rescue_WC1602A-Display_Character
+#
+DEF ventilator-rescue_WC1602A-Display_Character DS 0 20 Y Y 1 F N
+F0 "DS" -230 750 50 H V C CNN
+F1 "ventilator-rescue_WC1602A-Display_Character" 210 750 50 H V C CNN
+F2 "Display:WC1602A" 0 -900 50 H I C CIN
+F3 "http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf" 700 0 50 H I C CNN
+$FPLIST
+ *WC*1602A*
+$ENDFPLIST
+DRAW
+S -300 700 300 -700 1 1 10 f
+X VSS 1 0 -800 100 U 50 50 1 1 W
+X D3 10 -400 -200 100 R 50 50 1 1 I
+X D4 11 -400 -300 100 R 50 50 1 1 I
+X D5 12 -400 -400 100 R 50 50 1 1 I
+X D6 13 -400 -500 100 R 50 50 1 1 I
+X D7 14 -400 -600 100 R 50 50 1 1 I
+X LED(+) 15 400 300 100 L 50 50 1 1 W
+X LED(-) 16 400 200 100 L 50 50 1 1 W
+X VDD 2 0 800 100 D 50 50 1 1 W
+X VO 3 400 600 100 L 50 50 1 1 I
+X RS 4 -400 400 100 R 50 50 1 1 I
+X R/W 5 -400 500 100 R 50 50 1 1 I
+X E 6 -400 600 100 R 50 50 1 1 I
+X D0 7 -400 100 100 R 50 50 1 1 I
+X D1 8 -400 0 100 R 50 50 1 1 I
+X D2 9 -400 -100 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library
