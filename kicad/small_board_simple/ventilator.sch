@@ -1072,7 +1072,7 @@ U 1 1 5E7AE739
 P 2800 2850
 F 0 "A1" H 2800 2856 50  0000 C CNN
 F 1 "Arduino_UNO_R3" H 3350 1742 50  0000 C CNN
-F 2 "Module:Arduino_UNO_R3" H 2950 1800 50  0001 L CNN
+F 2 "small_board_simple:Arduino_UNO_R3_large_pads" H 2950 1800 50  0001 L CNN
 F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 2600 3900 50  0001 C CNN
 	1    2800 2850
 	1    0    0    -1  
